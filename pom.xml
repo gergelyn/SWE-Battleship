@@ -7,10 +7,39 @@
     <groupId>org.gergelyn</groupId>
     <artifactId>SWE-Battleship</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <description>Battleship game written in Java (JDK 17) with JavaFX for SWE class</description>
+    <developers>
+        <developer>
+            <email>preszthegas@gmail.com</email>
+            <name>Gergely Nagy</name>
+        </developer>
+    </developers>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.3.2</version>
+            </plugin>
+        </plugins>
+    </build>
+
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.3.2</version>
+                <configuration>
+                </configuration>
+            </plugin>
+        </plugins>
+    </reporting>
 
 </project>
