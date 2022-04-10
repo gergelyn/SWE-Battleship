@@ -5,7 +5,7 @@ public enum ShipType {
     SUBMARINE(3),
     CRUISER(3),
     BATTLESHIP(4),
-    CARRIER(5)
+    CARRIER(5);
 
     int shipLength;
 

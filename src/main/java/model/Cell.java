@@ -78,6 +78,8 @@ public class Cell {
             return CellStatus.MISS.getCharacter();
         } else if (isWater() && isHit()) {
             return CellStatus.MISS.getCharacter();
+        } else if (isWater() && isShip()) {
+            return CellStatus.SHIP.getCharacter();
         } else if (isWater()) {
             return CellStatus.WATER.getCharacter();
         } else {
