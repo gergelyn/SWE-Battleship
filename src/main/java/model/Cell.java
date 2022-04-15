@@ -74,8 +74,6 @@ public class Cell {
             return CellStatus.SUNK.getCharacter();
         } else if (isWater() && isShip() && isHit()) {
             return CellStatus.HIT.getCharacter();
-        } else if (isWater() && isShip() && isMiss()) {
-            return CellStatus.MISS.getCharacter();
         } else if (isWater() && isHit()) {
             return CellStatus.MISS.getCharacter();
         } else if (isWater() && isShip()) {
