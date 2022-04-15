@@ -48,4 +48,21 @@ public class Board {
         Ship ship = new Ship(cells, shipType, this);
         this.ships.add(ship);
     }
+
+    public void attackBoardCell(int[] coordinates) {
+        Cell cell = this.getBoard()[coordinates[0]][coordinates[1]];
+        if (cell.isWater() && cell.isShip() && cell.isHit() && cell.isSunk()) {
+            ;
+        } else if (cell.isWater() && cell.isShip() && cell.isHit()) {
+            ;
+        } else if (cell.isWater() && cell.isShip()) {
+            cell.setHit(true);
+        } else if (cell.isWater()) {
+            cell.setHit(true);
+            cell.setMiss(true);
+        }
+        for (Ship ship : this.ships) {
+            ship.setSunk();
+        }
+    }
 }

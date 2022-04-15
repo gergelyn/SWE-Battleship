@@ -17,10 +17,20 @@ public class Ship {
     }
 
     public void setSunk() {
+        List<Boolean> isShipHit = new ArrayList<>();
         for (Cell cell : this.cells) {
-            cell.setSunk(true);
+            if (cell.isWater() && cell.isShip() && cell.isHit()) {
+                isShipHit.add(true);
+            } else {
+                isShipHit.add(false);
+            }
         }
-        this.isSunk = true;
+        if (isShipHit.stream().allMatch(n -> n == true)) {
+            for (Cell cell : this.cells) {
+                cell.setSunk(true);
+            }
+            this.isSunk = true;
+        }
     }
 
 
